@@ -89,6 +89,8 @@ function fncGetList(currentPage) {
 			전체  ${resultPage.totalCount } 건수, 현재 ${resultPage.currentPage}  페이지
 		</td>
 	</tr>
+	
+	
 	<tr>
 		<td class="ct_list_b" width="100">No</td>
 		<td class="ct_line02"></td>
@@ -100,6 +102,8 @@ function fncGetList(currentPage) {
 		<td class="ct_line02"></td>
 		<td class="ct_list_b">현재상태</td>	
 	</tr>
+	
+	
 	<tr>
 		<td colspan="11" bgcolor="808285" height="1"></td>
 	</tr>
@@ -130,20 +134,12 @@ function fncGetList(currentPage) {
 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;">
 	<tr>
 		<td align="center">
-		
 			 <input type="hidden" id="currentPage" name="currentPage" value=""/>
-			
-		
 			<jsp:include page="../common/pageNavigator.jsp"/>
-
-		
     	</td>
 	</tr>
 </table>
-<!--  페이지 Navigator 끝 -->
-
 </form>
 </div>
-
 </body>
 </html>
