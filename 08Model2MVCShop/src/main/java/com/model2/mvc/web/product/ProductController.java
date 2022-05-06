@@ -86,12 +86,15 @@ public class ProductController {
 			search.setCurrentPage(1);
 		}
 		search.setPageSize(pageSize);
+		
 		Map<String, Object> map = productService.getProductList(search);
 		Page resultPage = new Page(search.getCurrentPage(), ((Integer) map.get("totalCount")).intValue(), pageUnit, pageSize);
-		System.out.println(resultPage);
+		
 		model.addAttribute("list", map.get("list"));
 		model.addAttribute("resultPage", resultPage);
 		model.addAttribute("search", search);
+		
 		return "forward:/product/listProduct.jsp";
 	}
+
 }

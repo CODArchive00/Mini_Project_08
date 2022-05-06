@@ -49,7 +49,7 @@ public class ProductServiceImpl implements ProductService {
 
 	public void updateProduct(Product product) throws Exception {
 		productDao.updateProduct(product);
-		System.out.println("업데이트");
 	}
+	
 
 }
