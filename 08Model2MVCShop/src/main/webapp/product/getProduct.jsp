@@ -128,14 +128,18 @@ function needLogin() {
 
 					<table border="0" cellspacing="0" cellpadding="0">
 						<tr>
+							<c:if test="${ user.role eq 'admin' }">
+								<td width="17" height="23"><img src="/images/ct_btnbg01.gif" width="17" height="23" /></td>
+								<td background="/images/ct_btnbg02.gif" class="ct_btn01" style="padding-top: 3px;">
+									<a href="updateProduct?prodNo=${product.prodNo}">수정</a>
+								<td width="14" height="23"><img src="/images/ct_btnbg03.gif" width="14" height="23"></td>
+								<td width="30"></td>
+							</c:if>
+
 							<c:if test="${ !empty param.menu }">
 								<td width="17" height="23"><img src="/images/ct_btnbg01.gif" width="17" height="23" /></td>
 								<td background="/images/ct_btnbg02.gif" class="ct_btn01" style="padding-top: 3px;">
-								<c:choose>
-									<c:when test="${ param.menu eq 'manage' }">
-										<a href="updateProduct?prodNo=${product.prodNo}">수정</a>
-									</c:when>
-									<c:when test="${ param.menu eq 'search' }">
+								
 										<c:choose>
 											<c:when test="${ !empty user }">
 												<a href="/addPurchaseView?prodNo=${product.prodNo}">구매</a>
@@ -144,11 +148,9 @@ function needLogin() {
 												<a href="javascript:needLogin()">구매</a>
 											</c:otherwise>
 										</c:choose>
-									</c:when>
-								</c:choose>
-								</td>
-								<td width="14" height="23">
-								<img src="/images/ct_btnbg03.gif" width="14" height="23"></td>
+										
+									</td>
+								<td width="14" height="23"><img src="/images/ct_btnbg03.gif" width="14" height="23"></td>
 								<td width="30"></td>
 							</c:if>
 							<td width="17" height="23">
