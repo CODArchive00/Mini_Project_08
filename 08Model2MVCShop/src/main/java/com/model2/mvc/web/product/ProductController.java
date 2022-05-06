@@ -44,7 +44,7 @@ public class ProductController {
 	@RequestMapping(value = "addProduct", method = RequestMethod.GET)
 	public String addProduct() throws Exception {
 		System.out.println("/product/addProduct : GET");
-		return "redirect:/product/addProductView.jsp";
+		return "redirect:/product/addProduct.jsp";
 	}
 
 	@RequestMapping(value = "addProduct", method = RequestMethod.POST)
